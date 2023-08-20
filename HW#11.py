@@ -2,7 +2,6 @@ from collections import UserDict
 import datetime
 
 class Field:
-    """Base class for fields in a record."""
 
     def __init__(self, value) -> None:
         self.__value = None
