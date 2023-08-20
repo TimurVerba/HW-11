@@ -24,6 +24,7 @@ class Field:
 
 
 class Phone(Field):
+    @staticmethod
     def validate_value(self, value):
         if not value.isdigit():
             raise ValueError("Phone number must consist of digits only.")
@@ -35,6 +36,7 @@ class Name(Field):
 
 
 class Birthday(Field):
+    @staticmethod
     def validate_value(self, value):
         try:
             parsed_birthday = datetime.datetime.strptime(value, '%Y-%m-%d').date()
